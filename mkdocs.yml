@@ -79,6 +79,7 @@ nav:
     - Integration patterns: guides/integration-patterns.md
   - SDKs:
     - JavaScript: sdks/javascript.md
+    - Python: sdks/python.md
     - Testing: sdks/testing.md
   - Reference:
     - Error codes: reference/errors.md

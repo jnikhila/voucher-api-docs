@@ -160,4 +160,4 @@ Understanding these core concepts is crucial because:
 
 - Review [quick start guide](quick-start.md) to see these concepts in action
 - Check [authentication guide](authentication.md) to understand security
-- See [error codes](../reference/errors.md) for troubleshooting
+- See [error codes](../../reference/errors.md) for troubleshooting

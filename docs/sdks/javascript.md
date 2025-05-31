@@ -144,9 +144,11 @@ app.post('/webhooks/voucher', async (req, res) => {
 
 ## Next Steps
 
-- Review [error handling](../reference/errors.md)
-- Check [rate limits](../reference/rate-limits.md)
-- See [webhook events](../reference/webhooks.md)
+- Review [error handling](../../reference/errors.md)
+- Check [rate limits](../../reference/rate-limits.md)
+- See [webhook events](../../reference/webhooks.md)
+- Learn about [complex discounts](../../guides/complex-discounts.md)
+- Explore [integration patterns](../../guides/integration-patterns.md)
 
 ## Additional Resources
 
@@ -458,8 +460,8 @@ describe('VoucherClient', () => {
 
 ## Next Steps
 
-- Review [Complex Discounts](../complex-discounts.md) for advanced scenarios
-- Explore [Integration Patterns](../integration-patterns.md) for best practices
+- Review [Complex Discounts](../../guides/complex-discounts.md) for advanced scenarios
+- Explore [Integration Patterns](../../guides/integration-patterns.md) for best practices
 - Check [Error Codes](../../reference/errors.md) for troubleshooting
 
 ## Additional Resources

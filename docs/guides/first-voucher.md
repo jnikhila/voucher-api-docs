@@ -180,10 +180,10 @@ Apply the validated voucher to an order:
 
 - Review [complex discount types](complex-discounts.md)
 - Check [integration patterns](integration-patterns.md)
-- See [error handling](../reference/errors.md)
+- See [error handling](../../reference/errors.md)
 
 ## Additional resources
 
-- [API Reference](../api-reference/vouchers.md)
-- [SDK Documentation](../sdks/javascript.md)
-- [Webhook Documentation](../reference/webhooks.md) 
+- [API Reference](../../api-reference/vouchers.md)
+- [SDK Documentation](../../sdks/javascript.md)
+- [Webhook Documentation](../../reference/webhooks.md) 

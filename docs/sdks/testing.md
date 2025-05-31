@@ -1,21 +1,27 @@
 # Testing Reference
 
-Learn how to test Voucher API integrations.
+Learn how to test your Voucher API integration.
 
 ## Test Environment
 
+### JavaScript
+
 ```javascript
-// JavaScript
+import { VoucherClient } from '@voucher/api';
+
 const client = new VoucherClient({
-  apiKey: 'test_key',
+  apiKey: 'test_api_key',
   environment: 'sandbox'
 });
 ```
 
+### Python
+
 ```python
-# Python
+from voucher_api import VoucherClient
+
 client = VoucherClient(
-    api_key='test_key',
+    api_key='test_api_key',
     environment='sandbox'
 )
 ```
@@ -40,7 +46,6 @@ client = VoucherClient(
 
 ```json
 {
-  "id": "order_test_123",
   "value": 100.00,
   "currency": "USD",
   "items": [
@@ -55,68 +60,62 @@ client = VoucherClient(
 
 ## Test Cases
 
-### Voucher Creation
+### Create Voucher
 
 ```javascript
 // JavaScript
-test('create voucher', async () => {
-  const voucher = await client.vouchers.create({
-    code: 'TEST2024',
-    type: 'percentage',
-    value: 20
-  });
-  
-  expect(voucher.code).toBe('TEST2024');
-  expect(voucher.type).toBe('percentage');
-  expect(voucher.value).toBe(20);
+const voucher = await client.vouchers.create({
+  code: 'TEST2024',
+  type: 'percentage',
+  value: 20
 });
+
+assert(voucher.code === 'TEST2024');
+assert(voucher.type === 'percentage');
+assert(voucher.value === 20);
 ```
 
 ```python
 # Python
-def test_create_voucher():
-    voucher = client.vouchers.create(
-        code='TEST2024',
-        type='percentage',
-        value=20
-    )
-    
-    assert voucher.code == 'TEST2024'
-    assert voucher.type == 'percentage'
-    assert voucher.value == 20
+voucher = client.vouchers.create(
+    code='TEST2024',
+    type='percentage',
+    value=20
+)
+
+assert voucher.code == 'TEST2024'
+assert voucher.type == 'percentage'
+assert voucher.value == 20
 ```
 
-### Voucher Validation
+### Validate Voucher
 
 ```javascript
 // JavaScript
-test('validate voucher', async () => {
-  const validation = await client.vouchers.validate({
-    code: 'TEST2024',
-    order: {
-      value: 100.00,
-      currency: 'USD'
+const validation = await client.vouchers.validate({
+  code: 'TEST2024',
+  order: {
+    value: 100.00,
+    currency: 'USD'
+  }
+});
+
+assert(validation.is_valid === true);
+assert(validation.discount_amount === 20.00);
+```
+
+```python
+# Python
+validation = client.vouchers.validate(
+    code='TEST2024',
+    order={
+        'value': 100.00,
+        'currency': 'USD'
     }
-  });
-  
-  expect(validation.is_valid).toBe(true);
-  expect(validation.discount_amount).toBe(20.00);
-});
-```
+)
 
-```python
-# Python
-def test_validate_voucher():
-    validation = client.vouchers.validate(
-        code='TEST2024',
-        order={
-            'value': 100.00,
-            'currency': 'USD'
-        }
-    )
-    
-    assert validation.is_valid is True
-    assert validation.discount_amount == 20.00
+assert validation.is_valid is True
+assert validation.discount_amount == 20.00
 ```
 
 ## Mocking
@@ -125,77 +124,122 @@ def test_validate_voucher():
 
 ```javascript
 // JavaScript
-import { mockVoucherApi } from '@voucher/api/testing';
+import { VoucherClient } from '@voucher/api';
+import nock from 'nock';
 
-beforeEach(() => {
-  mockVoucherApi(client);
+const client = new VoucherClient({
+  apiKey: 'test_api_key',
+  environment: 'sandbox'
+});
+
+nock('https://api.voucher.com')
+  .post('/v1/vouchers')
+  .reply(200, {
+    code: 'TEST2024',
+    type: 'percentage',
+    value: 20
+  });
+
+const voucher = await client.vouchers.create({
+  code: 'TEST2024',
+  type: 'percentage',
+  value: 20
 });
 ```
 
 ```python
 # Python
-from voucher.testing import mock_voucher_api
+from voucher_api import VoucherClient
+from unittest.mock import patch
 
-@pytest.fixture
-def client():
-    client = VoucherClient(api_key='test_key')
-    mock_voucher_api(client)
-    return client
+client = VoucherClient(
+    api_key='test_api_key',
+    environment='sandbox'
+)
+
+mock_response = {
+    'code': 'TEST2024',
+    'type': 'percentage',
+    'value': 20
+}
+
+with patch('voucher_api.client.requests.post') as mock_post:
+    mock_post.return_value.json.return_value = mock_response
+    mock_post.return_value.status_code = 200
+    
+    voucher = client.vouchers.create(
+        code='TEST2024',
+        type='percentage',
+        value=20
+    )
 ```
 
 ### Mock Webhooks
 
 ```javascript
 // JavaScript
-import { mockWebhook } from '@voucher/api/testing';
+import { WebhookHandler } from '@voucher/api';
 
-test('handle webhook', async () => {
-  const event = await mockWebhook('voucher.created', {
-    id: 'v_123',
-    code: 'TEST2024'
-  });
-  
-  expect(event.type).toBe('voucher.created');
-  expect(event.data.code).toBe('TEST2024');
-});
+const handler = new WebhookHandler('test_webhook_secret');
+const payload = {
+  type: 'voucher.created',
+  data: {
+    code: 'TEST2024',
+    type: 'percentage',
+    value: 20
+  }
+};
+
+const signature = handler.sign(payload);
+const event = handler.verify(payload, signature);
+
+assert(event.type === 'voucher.created');
+assert(event.data.code === 'TEST2024');
 ```
 
 ```python
 # Python
-from voucher.testing import mock_webhook
+from voucher_api import WebhookHandler
 
-def test_handle_webhook():
-    event = mock_webhook('voucher.created', {
-        'id': 'v_123',
-        'code': 'TEST2024'
-    })
-    
-    assert event.type == 'voucher.created'
-    assert event.data['code'] == 'TEST2024'
+handler = WebhookHandler('test_webhook_secret')
+payload = {
+    'type': 'voucher.created',
+    'data': {
+        'code': 'TEST2024',
+        'type': 'percentage',
+        'value': 20
+    }
+}
+
+signature = handler.sign(payload)
+event = handler.verify(payload, signature)
+
+assert event.type == 'voucher.created'
+assert event.data.code == 'TEST2024'
 ```
 
 ## Best Practices
 
 1. **Test Coverage**
-   - Test all endpoints
-   - Cover error cases
+   - Test all API endpoints
+   - Test error cases
    - Test edge cases
 
-2. **Test Data**
-   - Use realistic data
-   - Clean up test data
-   - Isolate test cases
+2. **Data Management**
+   - Use test data
+   - Clean up after tests
+   - Use unique test data
 
 3. **Performance**
-   - Mock external calls
+   - Mock external services
    - Use test environment
-   - Monitor test times
+   - Monitor test duration
 
 ## Next Steps
 
-- Review [error handling](../reference/errors.md)
-- Check [rate limits](../reference/rate-limits.md)
-- See [webhook events](../reference/webhooks.md)
+- Review [API reference](../../api-reference/vouchers.md)
+- Check [webhook events](../../reference/webhooks.md)
+- See [rate limits](../../reference/rate-limits.md)
 
 ## Additional Resources
 

@@ -110,5 +110,5 @@ Authentication errors return HTTP 401 status code:
 ## Next steps
 
 - Review [Quick start guide](quick-start.md) to begin using the API
-- See [Error codes](../reference/errors.md) for handling authentication errors
-- Learn about [Rate limits](../reference/rate-limits.md) for API usage
+- See [Error codes](../../reference/errors.md) for handling authentication errors
+- Learn about [Rate limits](../../reference/rate-limits.md) for API usage

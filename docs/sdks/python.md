@@ -11,7 +11,7 @@ pip install voucher-api
 ## Configuration
 
 ```python
-from voucher import VoucherClient
+from voucher_api import VoucherClient
 
 client = VoucherClient(
     api_key='your_api_key',
@@ -105,7 +105,7 @@ except VoucherError as error:
 ## Webhooks
 
 ```python
-from voucher import WebhookHandler
+from voucher_api import WebhookHandler
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -114,8 +114,8 @@ handler = WebhookHandler('your_webhook_secret')
 @app.route('/webhooks/voucher', methods=['POST'])
 def handle_webhook():
     event = handler.verify(
-        request.get_json(),
-        request.headers.get('X-Voucher-Signature')
+        request.data,
+        request.headers['X-Voucher-Signature']
     )
     
     if event.type == 'voucher.created':
@@ -147,12 +147,75 @@ def handle_webhook():
 
 ## Next Steps
 
-- Review [error handling](../reference/errors.md)
-- Check [rate limits](../reference/rate-limits.md)
-- See [webhook events](../reference/webhooks.md)
+- Review [error handling](../../reference/errors.md)
+- Check [rate limits](../../reference/rate-limits.md)
+- See [webhook events](../../reference/webhooks.md)
+- Learn about [complex discounts](../../guides/complex-discounts.md)
+- Explore [integration patterns](../../guides/integration-patterns.md)
 
 ## Additional Resources
 
 - [API Reference](../../api-reference/vouchers.md)
 - [Webhook Documentation](../../reference/webhooks.md)
-- [Rate Limits](../../reference/rate-limits.md) 
+- [Rate Limits](../../reference/rate-limits.md)
+
+### Voucher Validation
+
+```python
+# Validate a voucher
+validation = client.vouchers.validate(
+    code='SUMMER2024',
+    order_value=100.00,
+    customer_id='customer_123',
+    items=[
+        {
+            'id': 'item_1',
+            'price': 50.00,
+            'quantity': 2
+        }
+    ]
+)
+
+# Check validation result
+if validation.is_valid:
+    print('Discount amount:', validation.discount_amount)
+else:
+    print('Validation failed:', validation.error)
+```
+
+### Voucher Application
+
+```python
+# Apply a voucher
+application = client.vouchers.apply(
+    code='SUMMER2024',
+    order_id='order_456',
+    customer_id='customer_123',
+    items=[
+        {
+            'id': 'item_1',
+            'price': 50.00,
+            'quantity': 2
+        }
+    ]
+)
+
+# Remove applied voucher
+client.vouchers.remove(
+    code='SUMMER2024',
+    order_id='order_456'
+)
+```
+
+### Analytics
+
+```python
+# Get voucher analytics
+analytics = client.analytics.get_voucher_stats(
+    voucher_id='SUMMER2024',
+    start_date='2024-01-01',
+    end_date='2024-12-31'
+)
+
+# Get redemption history
+``` 
