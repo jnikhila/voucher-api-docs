@@ -9,25 +9,25 @@ Welcome to the comprehensive API documentation for the Voucher API. This powerfu
 <div class="card">
 <h3>Flexible discounts</h3>
 <p>Build percentage discounts, fixed amounts, BOGO offers, tiered pricing, and complex conditional logic</p>
-<a href="getting-started/quick-start.md" class="md-button md-button--primary">Get Started</a>
+<a href="getting-started/quick-start" class="md-button md-button--primary">Get Started</a>
 </div>
 
 <div class="card">
 <h3>Advanced analytics</h3>
 <p>Track performance, conversion rates, revenue impact, and customer behavior with detailed metrics</p>
-<a href="api-reference/analytics.md" class="md-button md-button--primary">Analytics Guide</a>
+<a href="api-reference/analytics" class="md-button md-button--primary">Analytics Guide</a>
 </div>
 
 <div class="card">
 <h3>Developer tools</h3>
 <p>RESTful API with comprehensive SDKs, webhooks, and robust error handling</p>
-<a href="api-reference/vouchers.md" class="md-button md-button--primary">API Reference</a>
+<a href="api-reference/vouchers" class="md-button md-button--primary">API Reference</a>
 </div>
 
 <div class="card">
 <h3>Global support</h3>
 <p>Support for multiple currencies, geographic restrictions, and customer segments</p>
-<a href="guides/integration-patterns.md" class="md-button md-button--primary">Integration Patterns</a>
+<a href="guides/integration-patterns" class="md-button md-button--primary">Integration Patterns</a>
 </div>
 
 </div>
@@ -125,8 +125,8 @@ Get started in minutes with a simple percentage discount:
 
 !!! tip "Need help?"
     
-    - Check out our [Quick start guide](getting-started/quick-start.md)
-    - Explore [Code examples](guides/first-voucher.md)
+    - Check out our [Quick start guide](getting-started/quick-start)
+    - Explore [Code examples](guides/first-voucher)
     - Join our [Community forum](https://community.voucher.com)
     - Contact [API support](mailto:api-support@voucher.com)
 
@@ -139,8 +139,8 @@ Get started in minutes with a simple percentage discount:
 - 🔧 Improved error messaging
 - 🪝 Added webhook support
 
-[View full changelog](reference/changelog.md){ .md-button }
+[View full changelog](reference/changelog){ .md-button }
 
 ---
 
-Ready to get started? Follow our [Quick start guide](getting-started/quick-start.md) or dive into the [API reference](api-reference/vouchers.md).
+Ready to get started? Follow our [Quick start guide](getting-started/quick-start) or dive into the [API reference](api-reference/vouchers).
