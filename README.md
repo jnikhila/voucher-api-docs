@@ -89,7 +89,7 @@ This is a demo project created as a writing sample. No contributions are needed 
 
 ## Deployment
 
-The documentation is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+The documentation is automatically deployed to Vercel when changes are pushed to the main branch.
 
 ## License
 
