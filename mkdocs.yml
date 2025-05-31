@@ -1,0 +1,103 @@
+site_name: Voucher API documentation
+site_description: Comprehensive API documentation for the Voucher API
+site_author: Voucher API Team
+site_url: https://voucher-api.github.io/voucher-api-docs
+
+# Repository
+repo_name: voucher-api/voucher-api-docs
+repo_url: https://github.com/voucher-api/voucher-api-docs
+
+# Configuration
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - meta
+  - attr_list
+  - def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting started:
+    - Quick start: getting-started/quick-start.md
+    - Authentication: getting-started/authentication.md
+    - Core concepts: getting-started/core-concepts.md
+  - API reference:
+    - Vouchers: api-reference/vouchers.md
+    - Validation: api-reference/validation.md
+    - Advanced types: api-reference/advanced-types.md
+    - Analytics: api-reference/analytics.md
+  - Guides:
+    - Creating your first voucher: guides/first-voucher.md
+    - Complex discounts: guides/complex-discounts.md
+    - Integration patterns: guides/integration-patterns.md
+  - SDKs:
+    - JavaScript: sdks/javascript.md
+    - Testing: sdks/testing.md
+  - Reference:
+    - Error codes: reference/errors.md
+    - Webhooks: reference/webhooks.md
+    - Rate limits: reference/rate-limits.md
+    - Changelog: reference/changelog.md
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/voucher-api
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/voucher_api
+  version:
+    provider: mike
