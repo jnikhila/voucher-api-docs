@@ -97,3 +97,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/jnikhila/voucher-api-docs
+
+extra_css:
+    - css/custom.css
