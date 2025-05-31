@@ -1,7 +1,7 @@
 site_name: Voucher API documentation
 site_description: Comprehensive API documentation for the Voucher API
 site_author: Nikhila Jain
-site_url: https://voucher-api-docs-mo1oibrye-nikjadesignergmailcoms-projects.vercel.app
+site_url: https://voucher-api-docs.vercel.app
 
 # Configuration
 theme:
@@ -88,6 +88,9 @@ plugins:
   - search
   - minify:
       minify_html: true
+
+extra_javascript:
+    - javascripts/footer.js
 
 # Extra
 extra:
