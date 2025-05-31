@@ -237,12 +237,12 @@ assert event.data.code == 'TEST2024'
 
 ## Next Steps
 
-- Review [API reference](../../api-reference/vouchers.md)
-- Check [webhook events](../../reference/webhooks.md)
-- See [rate limits](../../reference/rate-limits.md)
+- Review [API reference](../api-reference/vouchers.md)
+- Check [webhook events](../reference/webhooks.md)
+- See [rate limits](../reference/rate-limits.md)
 
 ## Additional Resources
 
-- [API Reference](../../api-reference/vouchers.md)
-- [Webhook Documentation](../../reference/webhooks.md)
-- [Rate Limits](../../reference/rate-limits.md) 
+- [API Reference](../api-reference/vouchers.md)
+- [Webhook Documentation](../reference/webhooks.md)
+- [Rate Limits](../reference/rate-limits.md) 

@@ -147,17 +147,17 @@ def handle_webhook():
 
 ## Next Steps
 
-- Review [error handling](../../reference/errors.md)
-- Check [rate limits](../../reference/rate-limits.md)
-- See [webhook events](../../reference/webhooks.md)
-- Learn about [complex discounts](../../guides/complex-discounts.md)
-- Explore [integration patterns](../../guides/integration-patterns.md)
+- Review [error handling](../reference/errors.md)
+- Check [rate limits](../reference/rate-limits.md)
+- See [webhook events](../reference/webhooks.md)
+- Learn about [complex discounts](../guides/complex-discounts.md)
+- Explore [integration patterns](../guides/integration-patterns.md)
 
 ## Additional Resources
 
-- [API Reference](../../api-reference/vouchers.md)
-- [Webhook Documentation](../../reference/webhooks.md)
-- [Rate Limits](../../reference/rate-limits.md)
+- [API Reference](../api-reference/vouchers.md)
+- [Webhook Documentation](../reference/webhooks.md)
+- [Rate Limits](../reference/rate-limits.md)
 
 ### Voucher Validation
 

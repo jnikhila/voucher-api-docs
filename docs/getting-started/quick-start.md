@@ -61,14 +61,13 @@ curl -X POST "https://api.voucher.com/v1/vouchers/apply" \
 
 Now that you've created your first voucher, explore more advanced features:
 
-- [Complex Discount Types](../../guides/complex-discounts.md) - BOGO, tiered pricing, and conditional logic
-- [Analytics & Reporting](../../api-reference/analytics.md) - Track performance and ROI
-- [Webhook Integration](../../reference/webhooks.md) - Real-time event notifications
-- [SDK Documentation](../../sdks/javascript.md) - Use official SDKs
+- [Complex Discount Types](../guides/complex-discounts.md) - BOGO, tiered pricing, and conditional logic
+- [Analytics & Reporting](../api-reference/analytics.md) - Track performance and ROI
+- [Webhook Integration](../reference/webhooks.md) - Real-time event notifications
 
 ## Need Help?
 
-- 📚 Browse [full API reference](../../api-reference/vouchers.md)
+- 📚 Browse [full API reference](../api-reference/vouchers.md)
 - 💬 Join [community forum](https://community.voucher.com)
 - 📧 Contact [support](mailto:api-support@voucher.com)
 - 🐛 Report issues on [GitHub](https://github.com/voucher/api)
