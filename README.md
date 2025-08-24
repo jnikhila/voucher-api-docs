@@ -2,10 +2,6 @@
 
 A comprehensive, self-initiated project showcasing a hypothetical Voucher API with modern documentation design and interactive features. This project demonstrates advanced API documentation writing capabilities, technical implementation skills, and user experience design principles.
 
-## 🎯 Project Overview
-
-This is a **self-initiated project** created to showcase API documentation writing skills and technical implementation capabilities. The Voucher API is a **hypothetical service** designed to demonstrate best practices in API documentation, developer experience, and technical writing.
-
 ### What This Project Demonstrates
 
 - **API Documentation Excellence**: Comprehensive, well-structured API documentation
@@ -13,34 +9,6 @@ This is a **self-initiated project** created to showcase API documentation writi
 - **Interactive Features**: Code examples, syntax highlighting, and user-friendly navigation
 - **Technical Implementation**: MkDocs setup, custom styling, and JavaScript enhancements
 - **Developer Experience**: Clear examples, error handling, and comprehensive guides
-
-## 🚀 Features
-
-### Visual Enhancements
-- **Modern Design**: Clean, professional styling with gradient backgrounds and smooth animations
-- **Interactive Elements**: HTTP method badges, copy-to-clipboard functionality, and hover effects
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Dark Mode Support**: Automatic theme switching with custom dark mode styling
-
-### Documentation Structure
-- **Comprehensive Coverage**: Complete API reference, guides, SDKs, and examples
-- **Interactive Code Blocks**: Tabbed examples in multiple languages (cURL, JavaScript, Python)
-- **Visual Hierarchy**: Clear section organization with enhanced typography
-- **Cross-References**: Seamless navigation between related documentation sections
-
-### Developer Experience
-- **Real-World Examples**: Practical code samples with realistic data
-- **Error Handling**: Detailed error responses and troubleshooting guides
-- **Authentication**: Complete authentication flow documentation
-- **Webhook Integration**: Event-driven architecture documentation
-
-## 📖 Documentation Sections
-
-- **Getting Started**: Quick start guide, authentication, and core concepts
-- **API Reference**: Complete endpoint documentation with examples
-- **Guides**: Step-by-step tutorials and integration patterns
-- **SDKs**: Language-specific client libraries and examples
-- **Reference**: Error codes, webhooks, rate limits, and changelog
 
 ## 🛠️ Development
 
@@ -109,7 +77,4 @@ This is a self-initiated project for portfolio purposes. However, if you'd like 
 
 ---
 
-*This project showcases the ability to create professional-grade API documentation that enhances developer experience and demonstrates technical writing excellence.*
-
-
-
+*This project is a self-initiated portfolio demonstration of API documentation. Reviewers can explore interactive examples, endpoint references, and guides at [voucher-api-docs.vercel.app](https://voucher-api-docs.vercel.app).*
