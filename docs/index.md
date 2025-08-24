@@ -7,25 +7,6 @@
     </div>
 </div>
 
-<div class="stats-grid">
-    <div class="stat-item">
-        <span class="stat-number">99.9%</span>
-        <span class="stat-label">API Uptime</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-number">< 50ms</span>
-        <span class="stat-label">Response Time</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-number">10M+</span>
-        <span class="stat-label">Vouchers Processed</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-number">150+</span>
-        <span class="stat-label">Countries Supported</span>
-    </div>
-</div>
-
 ## Why Choose Voucher API?
 
 Transform your promotional strategy with an API built for scale, reliability, and developer productivity. From startup flash sales to enterprise loyalty programs, we power discount experiences that convert.
@@ -63,7 +44,7 @@ Transform your promotional strategy with an API built for scale, reliability, an
     </div>
 </div>
 
-## Powerful Discount Types
+## Discount Types
 
 Build any promotional scenario with our flexible discount engine:
 
