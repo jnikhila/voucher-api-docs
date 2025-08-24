@@ -4,14 +4,21 @@ A comprehensive, self-initiated project showcasing a hypothetical Voucher API wi
 
 ### What This Project Demonstrates
 
-- **API Documentation Excellence**: Comprehensive, well-structured API documentation
-- **Modern Design Implementation**: Professional, visually appealing documentation site
-- **Interactive Features**: Code examples, syntax highlighting, and user-friendly navigation
-- **Technical Implementation**: MkDocs setup, custom styling, and JavaScript enhancements
-- **Developer Experience**: Clear examples, error handling, and comprehensive guides
+- **Structured API Documentation**: Well-organized reference with endpoints, parameters, and examples
+- **Documentation Design**: Modern, responsive layout with consistent typography
+- **Interactive Elements**: Code examples with syntax highlighting, tabbed language support, and copy-to-clipboard functionality
+- **Technical Implementation**: MkDocs configuration, custom CSS/JS, and build setup
+- **Documentation Features**: Authentication guides, error handling examples, and webhook integration
+- **Navigation and Accessibility**: Clear navigation, search functionality, and responsive design for mobile devices
 
 ## 🛠️ Development
 
+The Voucher API documentation is built using MkDocs with custom styling and interactive elements. The following instructions describe how to:
+
+- Install dependencies and set up the development environment  
+- Run a local development server for live editing and preview  
+- Build the documentation site for production deployment
+ 
 ### Prerequisites
 - Python 3.8+
 - pip (Python package manager)
@@ -61,11 +68,14 @@ The documentation site is deployed automatically on **Vercel** and accessible at
 
 ## 🔧 Technical Stack
 
+- **Markdown**: Primary authoring format for all documentation content
 - **MkDocs**: Static site generator for documentation
 - **Material for MkDocs**: Modern, responsive theme
-- **PyMdown Extensions**: Enhanced markdown features
-- **Custom CSS/JS**: Tailored styling and interactions
+- **PyMdown Extensions**: Enhanced Markdown features
+- **Diataxi Framework**: Documentation structure and content organization guidelines
+- **Custom CSS/JS**: Tailored styling and interactive elements
 - **Python**: Development environment and build tools
+- **Vercel**: Hosting platform for the documentation site
 
 ## 📄 License
 
