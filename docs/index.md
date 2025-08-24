@@ -1,146 +1,156 @@
-# Voucher API documentation
-
-Welcome to the comprehensive API documentation for the Voucher API. This powerful RESTful API enables businesses to create, manage, and apply sophisticated promotional offers and discount strategies.
-
-## Features
-
-<div class="grid">
-
-<div class="card">
-<h3>Flexible discounts</h3>
-<p>Build percentage discounts, fixed amounts, BOGO offers, tiered pricing, and complex conditional logic</p>
-<a href="getting-started/quick-start" class="md-button md-button--primary">Get Started</a>
+<div class="hero-section">
+    <h1 class="hero-title">Voucher API</h1>
+    <p class="hero-subtitle">The most developer-friendly API for building sophisticated promotional campaigns. Create, manage, and scale discount strategies that drive revenue growth.</p>
+    <div class="hero-cta">
+        <a href="api-reference/vouchers/" class="hero-button primary">Start Building</a>
+        <a href="#quick-start" class="hero-button secondary">View Examples</a>
+    </div>
 </div>
 
-<div class="card">
-<h3>Advanced analytics</h3>
-<p>Track performance, conversion rates, revenue impact, and customer behavior with detailed metrics</p>
-<a href="api-reference/analytics" class="md-button md-button--primary">Analytics Guide</a>
+<div class="stats-grid">
+    <div class="stat-item">
+        <span class="stat-number">99.9%</span>
+        <span class="stat-label">API Uptime</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">< 50ms</span>
+        <span class="stat-label">Response Time</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">10M+</span>
+        <span class="stat-label">Vouchers Processed</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">150+</span>
+        <span class="stat-label">Countries Supported</span>
+    </div>
 </div>
 
-<div class="card">
-<h3>Developer tools</h3>
-<p>RESTful API with comprehensive SDKs, webhooks, and robust error handling</p>
-<a href="api-reference/vouchers" class="md-button md-button--primary">API Reference</a>
-</div>
+## Why Choose Voucher API?
 
-<div class="card">
-<h3>Global support</h3>
-<p>Support for multiple currencies, geographic restrictions, and customer segments</p>
-<a href="guides/integration-patterns" class="md-button md-button--primary">Integration Patterns</a>
-</div>
+Transform your promotional strategy with an API built for scale, reliability, and developer productivity. From startup flash sales to enterprise loyalty programs, we power discount experiences that convert.
 
-</div>
-
-## Quick start
-
-Get started in minutes with a simple percentage discount:
-
-=== "cURL"
-
-    ```bash
-    curl -X POST "https://api.voucher.com/v1/vouchers" \
-      -H "Authorization: Bearer YOUR_API_KEY" \
-      -H "Content-Type: application/json" \
-      -d '{
-        "code": "WELCOME10",
-        "type": "percentage",
-        "discount_config": {
-          "percentage": 10.0
-        },
-        "conditions": {
-          "min_order_value": 25.00
-        }
-      }'
-    ```
-
-=== "JavaScript"
-
-    ```javascript
-    import { VouchersAPI } from '@voucher/vouchers-sdk';
-
-    const vouchers = new VouchersAPI({
-      apiKey: 'your-api-key'
-    });
-
-    const newVoucher = await vouchers.create({
-      code: 'WELCOME10',
-      type: 'percentage',
-      discount_config: {
-        percentage: 10.0
-      },
-      conditions: {
-        min_order_value: 25.00
-      }
-    });
-    ```
-
-=== "Node.js"
-
-    ```javascript
-    const { VouchersAPI } = require('@voucher/vouchers-sdk');
-
-    const vouchers = new VouchersAPI({
-      apiKey: 'your-api-key'
-    });
-
-    const newVoucher = await vouchers.create({
-      code: 'WELCOME10',
-      type: 'percentage',
-      discount_config: {
-        percentage: 10.0
-      },
-      conditions: {
-        min_order_value: 25.00
-      }
-    });
-    ```
-
-## Supported voucher types
-
-| Type | Description | Example Use Case |
-|------|-------------|------------------|
-| **Percentage** | Apply percentage discounts | 25% off summer collection |
-| **Fixed Amount** | Apply fixed monetary discounts | $10 off orders over $50 |
-| **BOGO** | Buy-one-get-one offers | Buy 2, get 1 free |
-| **Tiered** | Volume-based pricing | Bulk discount tiers |
-| **Conditional** | Rule-based with complex logic | Student discounts with verification |
-
-## Enterprise features
-
-- **Geographic targeting** - Country, region, and city-level restrictions
-- **Customer segmentation** - Target specific customer groups
-- **Usage analytics** - Comprehensive performance tracking
-- **Webhook integration** - Real-time event notifications
-- **Rate limiting** - Enterprise-grade API protection
-- **Multi-currency support** - Global commerce ready
-
-## API information
-
-- **Base URL:** `https://api.voucher.com/v1`
-- **Authentication:** Bearer Token
-- **Rate Limits:** 1000 requests/hour
-- **Response Format:** JSON
-- **API Version:** v1.2.0
-
-!!! tip "Need help?"
+<div class="features-grid">
+    <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Smart Targeting</h3>
+        <p class="feature-description">Create sophisticated targeting rules based on customer segments, purchase history, geographic location, and custom attributes.</p>
+        <a href="guides/advanced-targeting/" class="feature-link">Advanced Targeting Guide</a>
+    </div>
     
-    - Check out our [Quick start guide](getting-started/quick-start)
-    - Explore [Code examples](guides/first-voucher)
-    - Join our [Community forum](https://community.voucher.com)
-    - Contact [API support](mailto:api-support@voucher.com)
+    <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">Real-time Analytics</h3>
+        <p class="feature-description">Track campaign performance, conversion rates, and ROI with detailed analytics. A/B test different discount strategies effortlessly.</p>
+        <a href="api-reference/analytics/" class="feature-link">Analytics Reference</a>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Lightning Fast</h3>
+        <p class="feature-description">Sub-50ms response times globally with 99.9% uptime SLA. Built on modern infrastructure with automatic scaling and redundancy.</p>
+        <a href="guides/performance/" class="feature-link">Performance Details</a>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">Enterprise Security</h3>
+        <p class="feature-description">Bank-grade security with SOC 2 compliance, end-to-end encryption, and comprehensive audit logs for all operations.</p>
+        <a href="guides/security/" class="feature-link">Security Overview</a>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3 class="feature-title">Global Scale</h3>
+        <p class="feature-description">Multi-currency support, localized validation rules, and timezone-aware campaigns. Deploy promotions across 150+ countries instantly.</p>
+        <a href="guides/internationalization/" class="feature-link">Global Features</a>
+    </div>
+    
+    <div class="feature-card">
+        <div class="feature-icon">🛠️</div>
+        <h3 class="feature-title">Developer Experience</h3>
+        <p class="feature-description">Comprehensive SDKs, interactive API explorer, webhook integrations, and detailed error handling. Build faster, debug easier.</p>
+        <a href="sdks/" class="feature-link">SDK Documentation</a>
+    </div>
+</div>
 
-## Latest updates
+## Powerful Discount Types
 
-### Version 1.2.0
+Build any promotional scenario with our flexible discount engine:
 
-- ✨ Added tiered discount support
-- 📊 Enhanced analytics endpoints  
-- 🔧 Improved error messaging
-- 🪝 Added webhook support
+<div class="api-endpoint">
+<h3>Percentage Discounts</h3>
+<p>Classic percentage-based discounts with advanced conditional logic</p>
+<div class="endpoint-url">20% off orders over $50 • Buy 2 get 15% off • Student discounts</div>
+</div>
 
-[View full changelog](reference/changelog){ .md-button }
+<div class="api-endpoint">
+<h3>Fixed Amount Discounts</h3>
+<p>Dollar-value discounts with currency conversion and regional pricing</p>
+<div class="endpoint-url">$10 off • Free shipping • Bulk order discounts</div>
+</div>
 
----
+<div class="api-endpoint">
+<h3>BOGO & Tiered Offers</h3>
+<p>Complex promotional logic for sophisticated marketing campaigns</p>
+<div class="endpoint-url">Buy 2 Get 1 Free • Volume discounts • Progressive tiers</div>
+</div>
 
-Ready to get started? Follow our [Quick start guide](getting-started/quick-start) or dive into the [API reference](api-reference/vouchers).
+<div class="quick-start-section" id="quick-start">
+<h2 class="quick-start-title">Get Started in Minutes</h2>
+<p class="quick-start-subtitle">Create your first voucher with a simple API call. No complex setup required.</p>
+
+<div class="code-showcase">
+<div class="code-showcase-header">
+<span class="code-showcase-title">Create a Welcome Voucher</span>
+<div class="code-showcase-tabs">
+<span class="code-showcase-tab active">cURL</span>
+<span class="code-showcase-tab">JavaScript</span>
+<span class="code-showcase-tab">Python</span>
+</div>
+</div>
+
+```bash
+curl -X POST "https://api.voucher.com/v1/vouchers" \
+  -H "Authorization: Bearer sk_live_..." \
+  -H "Content-Type: application/json" \
+  -d '{
+    "code": "WELCOME20",
+    "type": "percentage", 
+    "value": 20,
+    "conditions": {
+      "min_order_value": 5000,
+      "max_uses": 1000,
+      "valid_until": "2024-12-31T23:59:59Z",
+      "customer_limit": 1
+    },
+    "metadata": {
+      "campaign": "new_customer_welcome",
+      "source": "landing_page"
+    }
+  }'
+```
+</div>
+
+<div class="response-section">
+<h4>Response</h4>
+<div class="response-note">
+Voucher created successfully! Your customers can now use code <strong>WELCOME20</strong> for 20% off orders over $50.
+</div>
+</div>
+</div>
+
+
+## Start Building
+- [Authentication Guide](authentication/) - Secure your API requests
+- [Voucher Management](api-reference/vouchers/) - Complete API reference  
+- [Validation Engine](api-reference/validation/) - Real-time voucher validation
+- [Analytics Dashboard](api-reference/analytics/) - Track performance metrics
+- [Webhook Configuration](guides/webhooks/) - Event-driven integrations
+
+## Need Help?
+- [Integration Examples](examples/) - Copy-paste code samples
+- [Best Practices](guides/best-practices/) - Production deployment tips
+- [Rate Limits](guides/rate-limits/) - Scaling considerations  
+- [Error Handling](guides/error-handling/) - Robust error management
+
