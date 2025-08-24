@@ -10,34 +10,23 @@ Learn how to authenticate with the Voucher API using API keys and understand sec
     API keys are used to authenticate your requests and identify your account. Keep them secure and never expose them in client-side code.
 
 ## Getting Your API Key
+Follow these steps to generate API key:
 
-### 1. Create an Account
+1. Create a Voucher API account at [dashboard.voucher.com](https://dashboard.voucher.com).
+2. Navigate to the **API Keys** section in your dashboard:
+3. Click the [Generate API Key](https://via.placeholder.com/800x400/6772e5/ffffff?text=Generate+New+API+Key)
+4. Choose Environment: Select the appropriate environment for your API key:
 
-First, create a Voucher API account at [dashboard.voucher.com](https://dashboard.voucher.com).
+    | Environment | Description | Use Case |
+    |-------------|-------------|----------|
+    | **Production** | Live API with real data | Production applications |
+    | **Sandbox** | Test environment | Development and testing |
 
-### 2. Generate API Keys
-
-Navigate to the **API Keys** section in your dashboard:
-
-=== "Dashboard"
-    ![API Keys Dashboard](https://via.placeholder.com/800x400/6772e5/ffffff?text=API+Keys+Dashboard)
-
-=== "Generate New Key"
-    ![Generate API Key](https://via.placeholder.com/800x400/6772e5/ffffff?text=Generate+New+API+Key)
-
-### 3. Choose Environment
-
-Select the appropriate environment for your API key:
-
-| Environment | Description | Use Case |
-|-------------|-------------|----------|
-| **Production** | Live API with real data | Production applications |
-| **Sandbox** | Test environment | Development and testing |
-
-!!! warning "Environment Separation"
-    Production and sandbox environments are completely separate. Data and vouchers created in sandbox won't appear in production.
+    !!! warning "Environment Separation"
+        Production and sandbox environments are completely separate. Data and vouchers created in sandbox won't appear in production.
 
 ## Using API Keys
+Follow these steps to use the API keys:
 
 ### Request Headers
 

@@ -6,12 +6,13 @@ Get started with Voucher API in minutes. This guide walks through creating your 
 > 
 > The Voucher API enables you to create, validate, and apply discount vouchers to orders. This quick start guide will help you create your first voucher and understand the basic workflow. You'll learn the essential steps: creating a voucher, validating it against an order, and applying the discount to complete the transaction.
 
-!!! info "Prerequisites"
-    Before you begin, make sure you have:
-    
-    - ✅ Voucher API account
-    - ✅ API key (get one from your dashboard)
-    - ✅ Basic understanding of REST APIs
+## Prerequisites
+  
+  Before you begin, make sure you have:
+
+  - ✅ Voucher API account
+  - ✅ API key (get one from your dashboard)
+  - ✅ Basic understanding of REST APIs
 
 ## Create Voucher
 
@@ -251,34 +252,12 @@ Once validated, apply the voucher to create a permanent record of the discount a
 
 Now that you've created your first voucher, explore more advanced features:
 
-### 🎯 **Core Features**
 - [Complex Discount Types](guides/complex-discounts/) - BOGO, tiered pricing, and conditional logic
 - [Analytics & Reporting](api-reference/analytics/) - Track performance and ROI
 - [Webhook Integration](reference/webhooks/) - Real-time event notifications
 
-### 🛠️ **Developer Tools**
-- [Full API Reference]api-reference/vouchers/) - Complete endpoint documentation
-- [SDK Libraries](sdks/javascript/) - Client libraries for your language
-- [Error Handling](reference/errors/) - Comprehensive error reference
-
-### 📚 **Guides & Examples**
-- [Integration Patterns](guides/integration-patterns/) - Best practices for implementation
-- [Testing Guide](sdks/testing/) - How to test your integration
-- [Rate Limits](reference/rate-limits/) - Understanding API limits
-
-## Need Help?
-
-!!! tip "Getting Support"
-    
+## Need Help?    
     - 📚 Browse [full API reference](api-reference/vouchers/)
     - 💬 Join [community forum](https://community.voucher.com)
     - 📧 Contact [support](mailto:api-support@voucher.com)
     - 🐛 Report issues on [GitHub](https://github.com/voucher/api)
-
-!!! success "Pro Tips"
-    
-    - Always validate vouchers before applying them
-    - Use webhooks to track voucher events in real-time
-    - Monitor usage analytics to optimize discount strategies
-    - Test thoroughly in sandbox environment first
-    - Implement proper error handling for all API calls
