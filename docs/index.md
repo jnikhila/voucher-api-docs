@@ -2,7 +2,7 @@
     <h1 class="hero-title">Voucher API</h1>
     <p class="hero-subtitle">The most developer-friendly API for building sophisticated promotional campaigns. Create, manage, and scale discount strategies that drive revenue growth.</p>
     <div class="hero-cta">
-        <a href="api-reference/vouchers/" class="hero-button primary">Start Building</a>
+        <a href="/getting-started/quick-start" class="hero-button primary">Start Building</a>
         <a href="#quick-start" class="hero-button secondary">View Examples</a>
     </div>
 </div>
@@ -35,42 +35,31 @@ Transform your promotional strategy with an API built for scale, reliability, an
         <div class="feature-icon">🎯</div>
         <h3 class="feature-title">Smart Targeting</h3>
         <p class="feature-description">Create sophisticated targeting rules based on customer segments, purchase history, geographic location, and custom attributes.</p>
-        <a href="guides/advanced-targeting/" class="feature-link">Advanced Targeting Guide</a>
     </div>
-    
     <div class="feature-card">
         <div class="feature-icon">📊</div>
         <h3 class="feature-title">Real-time Analytics</h3>
         <p class="feature-description">Track campaign performance, conversion rates, and ROI with detailed analytics. A/B test different discount strategies effortlessly.</p>
-        <a href="api-reference/analytics/" class="feature-link">Analytics Reference</a>
     </div>
-    
     <div class="feature-card">
         <div class="feature-icon">⚡</div>
         <h3 class="feature-title">Lightning Fast</h3>
         <p class="feature-description">Sub-50ms response times globally with 99.9% uptime SLA. Built on modern infrastructure with automatic scaling and redundancy.</p>
-        <a href="guides/performance/" class="feature-link">Performance Details</a>
     </div>
-    
     <div class="feature-card">
         <div class="feature-icon">🔒</div>
         <h3 class="feature-title">Enterprise Security</h3>
         <p class="feature-description">Bank-grade security with SOC 2 compliance, end-to-end encryption, and comprehensive audit logs for all operations.</p>
-        <a href="guides/security/" class="feature-link">Security Overview</a>
     </div>
-    
     <div class="feature-card">
         <div class="feature-icon">🌐</div>
         <h3 class="feature-title">Global Scale</h3>
         <p class="feature-description">Multi-currency support, localized validation rules, and timezone-aware campaigns. Deploy promotions across 150+ countries instantly.</p>
-        <a href="guides/internationalization/" class="feature-link">Global Features</a>
     </div>
-    
     <div class="feature-card">
         <div class="feature-icon">🛠️</div>
         <h3 class="feature-title">Developer Experience</h3>
         <p class="feature-description">Comprehensive SDKs, interactive API explorer, webhook integrations, and detailed error handling. Build faster, debug easier.</p>
-        <a href="sdks/" class="feature-link">SDK Documentation</a>
     </div>
 </div>
 
@@ -139,18 +128,3 @@ Voucher created successfully! Your customers can now use code <strong>WELCOME20<
 </div>
 </div>
 </div>
-
-
-## Start Building
-- [Authentication Guide](authentication/) - Secure your API requests
-- [Voucher Management](api-reference/vouchers/) - Complete API reference  
-- [Validation Engine](api-reference/validation/) - Real-time voucher validation
-- [Analytics Dashboard](api-reference/analytics/) - Track performance metrics
-- [Webhook Configuration](guides/webhooks/) - Event-driven integrations
-
-## Need Help?
-- [Integration Examples](examples/) - Copy-paste code samples
-- [Best Practices](guides/best-practices/) - Production deployment tips
-- [Rate Limits](guides/rate-limits/) - Scaling considerations  
-- [Error Handling](guides/error-handling/) - Robust error management
-

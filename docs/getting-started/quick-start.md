@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Create Your First Voucher
 
 Get started with Voucher API in minutes. This guide walks through creating your first voucher and applying it to an order.
 
@@ -13,7 +13,7 @@ Get started with Voucher API in minutes. This guide walks through creating your 
     - ✅ API key (get one from your dashboard)
     - ✅ Basic understanding of REST APIs
 
-## Step 1: Create Your First Voucher
+## Create Voucher
 
 Create a simple percentage discount voucher that gives customers 10% off orders over $25.
 
@@ -96,7 +96,7 @@ Create a simple percentage discount voucher that gives customers 10% off orders 
 !!! success "Voucher Created Successfully"
     Your voucher is now active and ready to be used by customers. The `usage_count` starts at 0 and will increment with each successful application.
 
-## Step 2: Validate the Voucher
+## Validate Voucher
 
 Before applying a voucher to an order, always validate it to ensure it can be used and calculate the discount amount.
 
@@ -178,7 +178,7 @@ Before applying a voucher to an order, always validate it to ensure it can be us
 !!! warning "Validation vs Application"
     Validation only checks if a voucher can be applied. It doesn't reserve or apply the voucher. Use the next step to actually apply the discount.
 
-## Step 3: Apply the Voucher
+## Apply Voucher
 
 Once validated, apply the voucher to create a permanent record of the discount application.
 
@@ -252,25 +252,25 @@ Once validated, apply the voucher to create a permanent record of the discount a
 Now that you've created your first voucher, explore more advanced features:
 
 ### 🎯 **Core Features**
-- [Complex Discount Types](../guides/complex-discounts/) - BOGO, tiered pricing, and conditional logic
-- [Analytics & Reporting](../api-reference/analytics/) - Track performance and ROI
-- [Webhook Integration](../reference/webhooks/) - Real-time event notifications
+- [Complex Discount Types](guides/complex-discounts/) - BOGO, tiered pricing, and conditional logic
+- [Analytics & Reporting](api-reference/analytics/) - Track performance and ROI
+- [Webhook Integration](reference/webhooks/) - Real-time event notifications
 
 ### 🛠️ **Developer Tools**
-- [Full API Reference](../api-reference/vouchers/) - Complete endpoint documentation
-- [SDK Libraries](../sdks/javascript/) - Client libraries for your language
-- [Error Handling](../reference/errors/) - Comprehensive error reference
+- [Full API Reference]api-reference/vouchers/) - Complete endpoint documentation
+- [SDK Libraries](sdks/javascript/) - Client libraries for your language
+- [Error Handling](reference/errors/) - Comprehensive error reference
 
 ### 📚 **Guides & Examples**
-- [Integration Patterns](../guides/integration-patterns/) - Best practices for implementation
-- [Testing Guide](../sdks/testing/) - How to test your integration
-- [Rate Limits](../reference/rate-limits/) - Understanding API limits
+- [Integration Patterns](guides/integration-patterns/) - Best practices for implementation
+- [Testing Guide](sdks/testing/) - How to test your integration
+- [Rate Limits](reference/rate-limits/) - Understanding API limits
 
 ## Need Help?
 
 !!! tip "Getting Support"
     
-    - 📚 Browse [full API reference](../api-reference/vouchers/)
+    - 📚 Browse [full API reference](api-reference/vouchers/)
     - 💬 Join [community forum](https://community.voucher.com)
     - 📧 Contact [support](mailto:api-support@voucher.com)
     - 🐛 Report issues on [GitHub](https://github.com/voucher/api)
