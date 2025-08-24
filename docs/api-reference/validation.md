@@ -305,34 +305,11 @@ The validation API returns detailed error responses when vouchers cannot be appl
 }
 ```
 
-## Best Practices
+## See Also
 
-### Validation Timing
-
-!!! tip "Early Validation"
-    Validate vouchers as soon as users enter them to provide immediate feedback and improve user experience.
-
-!!! tip "Revalidation"
-    Always revalidate vouchers before applying them, as conditions may have changed between validation and application.
-
-!!! tip "Caching"
-    Cache validation results for a short period to improve performance, but ensure they're refreshed when needed.
-
-### Error Handling
-
-!!! warning "Comprehensive Error Handling"
-    Handle all possible error cases and provide clear, actionable error messages to users.
-
-!!! warning "Logging"
-    Log validation failures for monitoring and debugging purposes.
-
-### Performance Optimization
-
-!!! success "Optimization Tips"
-    - Use efficient validation algorithms
-    - Implement caching strategies
-    - Monitor response times
-    - Use database indexes for voucher lookups
+- [API Best Practices](../explanation/api-best-practices.md) - Detailed validation best practices
+- [Voucher Discount Best Practices](../explanation/voucher-discount-best-practices.md) - General discount implementation guidance
+- [Integration Patterns](../reference/integration-patterns.md) - Common integration scenarios
 
 ## Rate Limits
 

@@ -60,25 +60,27 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
-  - Getting started:
-    - Quick start: getting-started/quick-start.md
-    - Authentication: getting-started/authentication.md
-    - Core concepts: getting-started/core-concepts.md
+  - Get started:
+    - Quick start: guides/quick-start.md
+  - Guides:
+    - Complex discounts: guides/complex-discounts.md
+    - Authentication: guides/authentication.md
   - API reference:
     - Vouchers: api-reference/vouchers.md
     - Validation: api-reference/validation.md
     - Advanced types: api-reference/advanced-types.md
     - Analytics: api-reference/analytics.md
-  - Guides:
-    - Creating your first voucher: guides/first-voucher.md
-    - Complex discounts: guides/complex-discounts.md
-    - Integration patterns: guides/integration-patterns.md
+  - Explanation:
+    - Concepts: explanation/core-concepts.md
+    - Voucher Discount Best Practices: explanation/voucher-discount-best-practices.md
+    - API Best Practices: explanation/api-best-practices.md
   - SDKs:
     - JavaScript: sdks/javascript.md
     - Python: sdks/python.md
     - Testing: sdks/testing.md
   - Reference:
     - Error codes: reference/errors.md
+    - Integration patterns: reference/integration-patterns.md
     - Webhooks: reference/webhooks.md
     - Rate limits: reference/rate-limits.md
     - Changelog: reference/changelog.md

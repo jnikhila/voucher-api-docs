@@ -537,43 +537,11 @@ Advanced voucher types require specialized validation to ensure proper applicati
 }
 ```
 
-## Best Practices
+## See Also
 
-### Configuration
-
-!!! tip "Validation Testing"
-    Always test advanced voucher configurations with various scenarios to ensure they work as expected.
-
-!!! tip "Edge Cases"
-    Consider edge cases like overlapping tiers, conflicting conditions, and stacking limits during configuration.
-
-!!! tip "Performance Monitoring"
-    Monitor the performance impact of complex voucher types, especially conditional and stackable vouchers.
-
-### Implementation
-
-!!! warning "Conflict Resolution"
-    Implement clear rules for handling conflicts between different voucher types and stacking scenarios.
-
-!!! warning "Usage Tracking"
-    Track usage patterns for advanced vouchers to understand their effectiveness and prevent abuse.
-
-!!! warning "Change Logging"
-    Log all changes to advanced voucher configurations for audit purposes and troubleshooting.
-
-### Testing
-
-!!! success "Comprehensive Testing"
-    - Test all possible combinations of conditions
-    - Verify discount calculations for edge cases
-    - Validate stacking behavior with multiple vouchers
-    - Check performance with high-volume scenarios
-
-!!! success "Integration Testing"
-    - Test with real order data
-    - Validate against existing voucher types
-    - Ensure compatibility with validation endpoints
-    - Verify analytics tracking for advanced types
+- [API Best Practices](../explanation/api-best-practices.md) - Detailed best practices for advanced voucher types
+- [Voucher Discount Best Practices](../explanation/voucher-discount-best-practices.md) - General discount implementation guidance
+- [Integration Patterns](../reference/integration-patterns.md) - Common integration scenarios
 
 ## Rate Limits
 

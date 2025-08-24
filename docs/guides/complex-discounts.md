@@ -1,12 +1,21 @@
 # Complex discount types
 
-Learn how to create and manage advanced discount scenarios using Voucher API.
+Learn how to create and manage advanced discount scenarios using Voucher API. This guide will walk you through implementing sophisticated discount strategies to enhance your promotional capabilities and drive customer engagement.
+
+## Prerequisites
+
+- Voucher API account
+- API key
+- Basic understanding of REST APIs
+- Familiarity with [core concepts](/explanation/core-concepts)
 
 ## BOGO discounts
 
 Buy-one-get-one (BOGO) offers allow customers to receive free or discounted items when purchasing specific products.
 
 ### BOGO configuration
+
+BOGO (Buy One Get One) discounts are powerful promotional tools that encourage customers to purchase more items. They work by offering a free or discounted item when a customer purchases a specified quantity of eligible products.
 
 ```json
 {
@@ -20,6 +29,14 @@ Buy-one-get-one (BOGO) offers allow customers to receive free or discounted item
   }
 }
 ```
+
+**Key parameters:**
+
+- `buy_quantity`: Number of items customer must purchase
+- `get_quantity`: Number of items customer receives at a discount
+- `get_discount`: Amount of discount applied to the free items
+- `get_discount_type`: Type of discount (percentage or fixed)
+- `applicable_items`: Array of product IDs eligible for this promotion
 
 ### Implementation
 
@@ -69,7 +86,7 @@ Buy-one-get-one (BOGO) offers allow customers to receive free or discounted item
 
 ## Tiered discounts
 
-Tiered discounts provide different discount levels based on purchase quantity or value.
+Tiered discounts provide different discount levels based on purchase quantity or value. This strategy rewards customers who spend more, encouraging larger order values while providing flexibility in your promotional structure.
 
 ### Tiered configuration
 
@@ -97,6 +114,13 @@ Tiered discounts provide different discount levels based on purchase quantity or
   }
 }
 ```
+
+**Key parameters:**
+
+- `tiers`: Array of discount tiers
+- `threshold`: Minimum order value to qualify for this tier
+- `discount`: Amount of discount to apply
+- `discount_type`: Type of discount (percentage or fixed)
 
 ### Implementation
 
@@ -154,7 +178,7 @@ Tiered discounts provide different discount levels based on purchase quantity or
 
 ## Conditional discounts
 
-Conditional discounts apply different rules based on specific conditions.
+Conditional discounts apply different rules based on specific conditions. These are the most flexible discount types, allowing you to target specific customer segments or behaviors with tailored promotions.
 
 ### Conditional configuration
 
@@ -187,6 +211,13 @@ Conditional discounts apply different rules based on specific conditions.
   }
 }
 ```
+
+**Key parameters:**
+
+- `conditions`: Array of condition objects
+- `if`: Criteria that must be met (customer attributes, order properties)
+- `then`: Discount to apply when conditions are met
+- `discount_type`: Type of discount (percentage or fixed)
 
 ### Implementation
 
@@ -244,31 +275,56 @@ Conditional discounts apply different rules based on specific conditions.
     });
     ```
 
-## Best practices
+## Validating complex discounts
 
-1. **Validation**
-   - Test all discount scenarios
-   - Verify edge cases
-   - Check customer eligibility
+Before deploying your discount vouchers, it's essential to validate them to ensure they work as expected:
 
-2. **Performance**
-   - Cache validation results
-   - Use batch operations
-   - Monitor response times
+=== "JavaScript"
 
-3. **Error Handling**
-   - Handle validation errors
-   - Implement retry logic
-   - Log discount calculations
+    ```javascript
+    // Validate a BOGO voucher
+    const validation = await vouchers.validate({
+      code: 'BOGO50',
+      order: {
+        items: [
+          { id: 'item_1', quantity: 2, price: 50.00 },
+          { id: 'item_3', quantity: 1, price: 30.00 }
+        ],
+        value: 130.00,
+        currency: 'USD'
+      }
+    });
+    
+    console.log(validation.valid); // true or false
+    console.log(validation.discount); // discount amount
+    ```
 
-## Next steps
+=== "Node.js"
 
-- Review [integration patterns](integration-patterns.md)
+    ```javascript
+    // Validate a tiered voucher
+    const validation = await vouchers.validate({
+      code: 'TIERED20',
+      order: {
+        value: 250.00,
+        currency: 'USD'
+      }
+    });
+    
+    console.log(validation.valid); // true or false
+    console.log(validation.discount); // discount amount
+    console.log(validation.applied_tier); // which tier was applied
+    ```
+
+## Next Steps
+
 - Check [analytics integration](../api-reference/analytics.md)
 - See [error handling](../reference/errors.md)
 
-## Additional resources
+## See Also
 
+- [Integration Patterns](../reference/integration-patterns.md)
+- [Voucher Discount Best Practices](../explanation/voucher-discount-best-practices.md)
 - [API Reference](../api-reference/vouchers.md)
 - [Webhook Documentation](../reference/webhooks.md)
-- [Rate Limits](../reference/rate-limits.md) 
+- [Rate Limits](../reference/rate-limits.md)

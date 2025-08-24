@@ -1,10 +1,10 @@
-# Integration patterns
+# Integration Patterns
 
-Learn best practices and common patterns for integrating Voucher API into your applications.
+This reference document outlines best practices and common patterns for integrating Voucher API into your applications.
 
-## Common integration scenarios
+## Common Integration Scenarios
 
-### E-commerce integration
+### E-commerce Integration
 
 ```mermaid
 graph TD
@@ -14,17 +14,17 @@ graph TD
     D -->|Processes| E[Payment]
 ```
 
-1. **Cart integration**
+1. **Cart Integration**
    - Validate vouchers during cart updates
    - Apply discounts in real-time
    - Handle multiple vouchers
 
-2. **Checkout flow**
+2. **Checkout Flow**
    - Validate final order
    - Apply confirmed discount
    - Record redemption
 
-### Mobile app integration
+### Mobile App Integration
 
 ```mermaid
 graph LR
@@ -34,17 +34,17 @@ graph LR
     B -->|Updates| A
 ```
 
-1. **API integration**
+1. **API Integration**
    - Use SDKs for native platforms
    - Handle offline scenarios
    - Implement retry logic
 
-2. **User experience**
+2. **User Experience**
    - Show real-time validation
    - Display discount preview
    - Handle errors gracefully
 
-## Implementation examples
+## Implementation Examples
 
 === "JavaScript"
 
@@ -120,9 +120,9 @@ graph LR
     });
     ```
 
-## Best practices
+## Best Practices
 
-1. **Error handling**
+1. **Error Handling**
    - Implement proper error handling
    - Use retry mechanisms
    - Log validation failures
@@ -137,31 +137,12 @@ graph LR
    - Use secure API keys
    - Implement proper authentication
 
-## Testing strategy
+## See Also
 
-1. **Unit tests**
-   - Test validation logic
-   - Mock API responses
-   - Verify error handling
-
-2. **Integration tests**
-   - Test end-to-end flows
-   - Verify discount calculations
-   - Check error scenarios
-
-3. **Load testing**
-   - Test under load
-   - Verify rate limits
-   - Check performance
-
-## Next steps
-
-- Review [complex discount types](complex-discounts.md)
-- Check [analytics integration](../api-reference/analytics.md)
-- See [error handling](../reference/errors.md)
-
-## Additional resources
-
-- [API reference](../api-reference/vouchers.md)
-- [Webhook documentation](../reference/webhooks.md)
-- [Rate limits](../reference/rate-limits.md) 
+- [Complex Discount Types](../guides/complex-discounts.md)
+- [Analytics Integration](../api-reference/analytics.md)
+- [Error Handling](../reference/errors.md)
+- [API Reference](../api-reference/vouchers.md)
+- [Webhook Documentation](../reference/webhooks.md)
+- [Rate Limits](../reference/rate-limits.md)
+- [Voucher Discount Best Practices](../explanation/voucher-discount-best-practices.md)

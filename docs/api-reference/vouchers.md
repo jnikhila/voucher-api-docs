@@ -683,4 +683,4 @@ Use test API keys to create and test vouchers without affecting production data.
 - [Validation Reference](validation.md) - Learn about advanced validation rules
 - [Analytics Endpoints](analytics.md) - Track voucher performance and usage
 - [Advanced Types](advanced-types.md) - Complex discount scenarios and combinations
-- [Integration Patterns](../guides/integration-patterns.md) - Best practices for implementing vouchers
+- [Integration Patterns](../reference/integration-patterns.md) - Best practices for implementing vouchers

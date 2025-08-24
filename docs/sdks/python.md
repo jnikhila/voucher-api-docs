@@ -151,7 +151,7 @@ def handle_webhook():
 - Check [rate limits](../reference/rate-limits.md)
 - See [webhook events](../reference/webhooks.md)
 - Learn about [complex discounts](../guides/complex-discounts.md)
-- Explore [integration patterns](../guides/integration-patterns.md)
+- Explore [integration patterns](../reference/integration-patterns.md)
 
 ## Additional Resources
 
@@ -218,4 +218,4 @@ analytics = client.analytics.get_voucher_stats(
 )
 
 # Get redemption history
-``` 
+```

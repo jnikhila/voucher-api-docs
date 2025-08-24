@@ -252,12 +252,11 @@ Once validated, apply the voucher to create a permanent record of the discount a
 
 Now that you've created your first voucher, explore more advanced features:
 
-- [Complex Discount Types](guides/complex-discounts/) - BOGO, tiered pricing, and conditional logic
-- [Analytics & Reporting](api-reference/analytics/) - Track performance and ROI
-- [Webhook Integration](reference/webhooks/) - Real-time event notifications
+- [Complex Discount Types](/guides/complex-discounts/) - BOGO, tiered pricing, and conditional logic
+- [Analytics & Reporting](/api-reference/analytics/) - Track performance and ROI
+- [Webhook Integration](/reference/webhooks/) - Real-time event notifications
 
 ## Need Help?    
-    - 📚 Browse [full API reference](api-reference/vouchers/)
-    - 💬 Join [community forum](https://community.voucher.com)
-    - 📧 Contact [support](mailto:api-support@voucher.com)
-    - 🐛 Report issues on [GitHub](https://github.com/voucher/api)
+
+- 📚 Browse [full API reference](/api-reference/vouchers/)
+

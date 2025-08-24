@@ -413,26 +413,11 @@ GET /analytics/export/{export_id}
 }
 ```
 
-## Best Practices
+## See Also
 
-### Data Collection
-- Track all voucher interactions including views, attempts, and successful applications to get complete insights
-- Set up real-time alerts for unusual patterns or performance drops to respond quickly to issues
-- Analyze performance by customer segments, geographic regions, and time periods to identify optimization opportunities
-
-### Performance Monitoring
-- **Conversion Rate**: Percentage of voucher views that result in usage
-- **Revenue Impact**: Net revenue change from voucher campaigns
-- **Customer Acquisition**: New customers acquired through vouchers
-- **Repeat Usage**: Customers who use vouchers multiple times
-
-### Export Management
-- Schedule exports during off-peak hours
-- Use appropriate formats for your analysis tools
-- Clean up old exports to manage storage
-- Validate export data before analysis
-- Exports are automatically deleted after 24 hours
-- Download and store important reports locally
+- [API Best Practices](../explanation/api-best-practices.md) - Detailed analytics best practices
+- [Voucher Discount Best Practices](../explanation/voucher-discount-best-practices.md) - General discount implementation guidance
+- [Integration Patterns](../reference/integration-patterns.md) - Common integration scenarios
 
 ## Rate Limits
 

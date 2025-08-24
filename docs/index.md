@@ -1,8 +1,8 @@
 <div class="hero-section">
     <h1 class="hero-title">Voucher API</h1>
-    <p class="hero-subtitle">The most developer-friendly API for building sophisticated promotional campaigns. Create, manage, and scale discount strategies that drive revenue growth.</p>
+    <p class="hero-subtitle">The Voucher API provides endpoints to create, manage, and track promotional discounts.</p>
     <div class="hero-cta">
-        <a href="/getting-started/quick-start" class="hero-button primary">Start Building</a>
+        <a href="/guides/quick-start" class="hero-button primary">Start Building</a>
         <a href="#quick-start" class="hero-button secondary">View Examples</a>
     </div>
 </div>
